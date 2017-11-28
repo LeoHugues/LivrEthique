@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    {{ parent() }}
     {{ form_start(form) }}
     {{ form_widget(form) }}
 
-    <input type="submit" value="Create"
-           class="btn btn-default pull-right" />
+    <input type="submit" value="Envoyer" class="btn btn-defaultt" />
     {{ form_end(form) }}
 {% endblock %}
