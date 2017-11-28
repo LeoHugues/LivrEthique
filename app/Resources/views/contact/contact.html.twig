@@ -7,7 +7,14 @@
 
 {% block body %}
     {{ parent() }}
-    <form action="{{ path('contact') }}">
+    {% if app.session.flashBag.has('success') %}
+        <div class="alert alert-success text-center">
+            {% for msg in app.session.flashBag.get('success') %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+    <form action="{{ path('contact') }}" method="post">
         <div class="text-center">
             <div class="input-group col-md-6">
                 <span class="input-group-addon"> Prénom </span>
