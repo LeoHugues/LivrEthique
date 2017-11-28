@@ -22,7 +22,6 @@ class ContactType extends AbstractType
             ->add('lastname',TextType::class)
             ->add('phone',TextType::class)
             ->add('address',TextType::class)
-            ->add('email',TextType::class)
-            ->add('brithday',DateTime::class);
+            ->add('email',TextType::class);
     }
 }

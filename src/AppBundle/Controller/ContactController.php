@@ -2,20 +2,22 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Contact;
+use AppBundle\Form\Type\ContactType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class ContactController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+
         return $this->render('default/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'form'     => $form->createView(),
         ]);
     }
 }
