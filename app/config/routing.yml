@@ -4,4 +4,4 @@ app:
 
 contact:
     path:     /contact
-    defaults: { _controller: AppBundle:Contact:index }
+    defaults: { _controller: AppBundle:Contact:contact }

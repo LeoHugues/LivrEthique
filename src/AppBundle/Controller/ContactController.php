@@ -10,12 +10,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 class ContactController extends Controller
 {
-    public function indexAction(Request $request)
+    public function contactAction(Request $request)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
 
-        return $this->render('default/index.html.twig', [
+        return $this->render('default/contact.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
             'form'     => $form->createView(),
         ]);
