@@ -8,5 +8,22 @@
  */
 class User
 {
+    public $id;
+    public $login;
+    public $password;
+    public $nom;
+    public $prenom;
+    public $adresse;
+    public $ville;
+    public $dateNaissance;
+    public $dpt;
+    public $idLivret;
+
+
+    public function __construct(){
+
+    }
+
+
 
 }
