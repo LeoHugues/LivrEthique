@@ -1,4 +1,11 @@
 {% extends 'base-proto.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/mainHeader.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/news.css') }}">
+{% endblock %}
 {% block body %}
     <span>Vous êtes connecté</span>
 {% endblock %}

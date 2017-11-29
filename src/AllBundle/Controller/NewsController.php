@@ -18,7 +18,7 @@ class NewsController extends Controller
     /**
      * @Route("/news")
      */
-    public function newsAction(Request $request)
+    public function newsAction()
     {
         //Simulation d'articles
         $newsTab = [];
