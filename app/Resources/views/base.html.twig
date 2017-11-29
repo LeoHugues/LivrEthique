@@ -7,16 +7,18 @@
             <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
             <script src="{{ asset('js/jquery.min.js') }}"></script>
             <script src="{{ asset('js/bootstrap.js') }}"></script>
+            <link rel="stylesheet" href="{{ asset('css/mainHeader.css') }}">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}
-            <div class="container">
-                <div class="jumbotron">
-                    <h1>LivrEthique</h1>
-                    <p>LivrEthique : la solution pour investir dans des projets éthiquement responsables !</p>
-                </div>
+            <div class="jumbotron">
+                <h1>LivrEthique</h1>
+                <p>LivrEthique est un produit financier innovant. Il permet de garantir une utilisation éthique, responsable ou solidaire de l’argent qui “dort” sur nos comptes. En effet nous souhaitons rendre les citoyens, acteurs de leur économie. Nous souhaitons rendre le pouvoir des banques à leur client, qui trop souvent ne saisissent pas toute la complexité et toute l’importance de notre modèle économique. Nous savons comme cela est frustrant, et comme il est difficile d’agir puisque nous ne pouvons pas nous passer des banques aujourd’hui.
+
+                    A partir de ce constat, nous avons imaginé une solution permettant de redonner du pouvoir à ceux qui le souhaite. Nous offrons la possibilitée à nos client de comprendre et de choisir comment participer, à leur niveau, à la croissance de leur ville, de leur région ou de leur pays.
+                </p>
             </div>
         {% endblock %}
         {% block javascripts %}{% endblock %}

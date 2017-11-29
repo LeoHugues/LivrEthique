@@ -1,34 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets 'contact/css/main.css' %}
+{% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 {% endblock %}
 
 {% block body %}
     {{ parent() }}
-    <form action="{{ path('contact') }}">
-        <div class="input-group col-md-6">
-            <span class="input-group-addon"> Prénom </span>
-            <input class="form-control" type="text" id="firstname" name="firstname" />
+    {% if app.session.flashBag.has('success') %}
+        <div class="alert alert-success text-center">
+            {% for msg in app.session.flashBag.get('success') %}
+                {{ msg }}
+            {% endfor %}
         </div>
-        <br>
-        <div class="input-group col-md-6">
-            <span class="input-group-addon"> Nom </span>
-            <input class="form-control" type="text" object="lastname" name="lastname" />
-        </div>
-        <br>
-        <div class="input-group col-md-6">
-            <span class="input-group-addon"> Objet </span>
-            <input class="form-control" type="text" id="object" name="object" />
-        </div>
-        <br>
-        <div class="input-group col-md-6">
-            <span class="input-group-addon"> Message </span>
-            <textarea class="form-control" id="message" name="message" rows="4" cols="50" ></textarea>
-        </div>
-        <br>
+    {% endif %}
+    <form action="{{ path('contact') }}" method="post">
+        <div class="text-center">
+            <div class="input-group col-md-6">
+                <span class="input-group-addon"> Prénom </span>
+                <input class="form-control" type="text" id="firstname" name="firstname" required />
+            </div>
+            <br>
+            <div class="input-group col-md-6">
+                <span class="input-group-addon"> Nom </span>
+                <input class="form-control" type="text" object="lastname" name="lastname" required/>
+            </div>
+            <br>
+            <div class="input-group col-md-6">
+                <span class="input-group-addon"> Objet </span>
+                <input class="form-control" type="text" id="object" name="object" required />
+            </div>
+            <br>
+            <div class="input-group col-md-6">
+                <span class="input-group-addon"> Message </span>
+                <textarea class="form-control" id="message" name="message" rows="4" cols="50" required ></textarea>
+            </div>
+            <br>
 
-        <input type="submit" value="Envoyer" class="btn btn-default" />
+            <input type="submit" value="Envoyer" class="btn btn-default" />
+        </div>
     </form>
 {% endblock %}
