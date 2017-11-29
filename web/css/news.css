@@ -1,0 +1,10 @@
+.news_block {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    border: 1px solid orange;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    border-radius: 10%;
+    background-color: aliceblue;
+}
