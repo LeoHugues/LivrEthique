@@ -1,6 +1,5 @@
 {% extends 'base-1.html.twig' %}
     {% block body %}
-        {{ parent() }}
         {% block login %}
             <span>Connexion</span>
             <form action="{{ path('connected') }}" method="post" style="margin-bottom: 100px">

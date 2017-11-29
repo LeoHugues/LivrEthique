@@ -23,18 +23,7 @@ class UserController extends Controller
     public function indexAction(Request $request)
     {
         if($request->isMethod('POST')) {
-            $user = new User();
-            $user->setNom("Jean");
-            $user->setPrenom("Jean");
 
-            $user->setLogin($request->request->get('login'));
-            $user->setPassword($request->request->get('password'));
-
-            $user->setAdresse("1 rue ici");
-            $user->setVille("Montpellier");
-            $user->setCp("34000");
-            $user->setDateNaissance("01/01/1990");
-            $user->setIdLivret("1");
 
             $this->connectedAction();
         }
@@ -45,11 +34,33 @@ class UserController extends Controller
     }
 
     /**
-     * @Route("/connected")
+     * @Route("/news")
      */
     public function connectedAction(){
         return $this->render('All/user/connected.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR
+        ]);
+    }
+
+    /**
+     * @Route("/info")
+     */
+    public function infoAction(){
+        $user = new User();
+        $user->setNom("Jean");
+        $user->setPrenom("Jean");
+
+        $user->setLogin("test");
+        $user->setPassword("test");
+
+        $user->setAdresse("1 rue ici");
+        $user->setVille("Montpellier");
+        $user->setCp("34000");
+        $user->setDateNaissance("01/01/1990");
+        $user->setIdLivret("1");
+        return $this->render('All/user/info.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
+            'user' => $user
         ]);
     }
 

@@ -4,8 +4,12 @@ all:
     prefix:   /
 
 connected:
-    path: /connected
+    path: /news
     defaults: { _controller: AllBundle:User:index}
+
+info:
+    path: /info
+    defaults: { _controller: AllBundle:User:info}
 
 app:
     resource: '@AppBundle/Controller/'
