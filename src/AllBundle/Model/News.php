@@ -1,5 +1,5 @@
 <?php
-
+namespace AllBundle\Model;
 /**
  * Created by PhpStorm.
  * user: Nil

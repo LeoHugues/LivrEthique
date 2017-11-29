@@ -3,7 +3,7 @@
         {{ parent() }}
         {% block login %}
             <span>Connexion</span>
-            <form action="{{ path('login') }}">
+            <form action="{{ path('index') }}" method="post">
                 <div class="input-group col-md-6">
                     <span class="input-group-addon">Identifiant</span>
                     <input class="form-control" type="text" id="firstname" name="login" />
