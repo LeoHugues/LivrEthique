@@ -116,5 +116,5 @@ class News
     {
         $this->newsCategoryId = $newsCategoryId;
     }
-    
+
 }

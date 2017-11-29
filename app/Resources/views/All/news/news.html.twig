@@ -7,13 +7,21 @@
         <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
         <script src="{{ asset('js/jquery.min.js') }}"></script>
         <script src="{{ asset('js/bootstrap.js') }}"></script>
-        <link rel="stylesheet" href="{{ asset('css/mainHeader.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/news.css') }}">
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
 {% block body %}
-<p>test</p>
+    {% for news in newsTab %}
+        <div class="news_block">
+           <h2>{{ news.title }}</h2>
+            <p>
+                {{ news.content }}
+            </p>
+        </div>
+
+    {% endfor %}
 {% endblock %}
 {% block javascripts %}{% endblock %}
 </body>

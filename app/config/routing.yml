@@ -3,9 +3,9 @@ all:
     type:     annotation
     prefix:   /
 
-index:
+login:
     path: /
-    defaults: { _controller: AllBundle:User:index}
+    defaults: { _controller: AllBundle:User:login}
 
 app:
     resource: '@AppBundle/Controller/'
@@ -17,4 +17,4 @@ contact:
 
 news:
     path:     /news
-    defaults: { _controller: AppBundle:NewsController:news }
+    defaults: { _controller: AllBundle:News:news }
