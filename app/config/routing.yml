@@ -14,3 +14,7 @@ app:
 contact:
     path:     /contact
     defaults: { _controller: AppBundle:Contact:contact }
+
+news:
+    path:     /news
+    defaults: { _controller: AppBundle:NewsController:news }
