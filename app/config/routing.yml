@@ -3,8 +3,8 @@ all:
     type:     annotation
     prefix:   /
 
-index:
-    path: /
+connected:
+    path: /connected
     defaults: { _controller: AllBundle:User:index}
 
 app:

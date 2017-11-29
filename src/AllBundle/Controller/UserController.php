@@ -35,14 +35,21 @@ class UserController extends Controller
             $user->setDateNaissance("01/01/1990");
             $user->setIdLivret("1");
 
-            return $this->render('All/user/connected.html.twig', [
-                'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR
-            ]);
+            $this->connectedAction();
         }
         return $this->render('All/user/login.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR
         ]);
 
+    }
+
+    /**
+     * @Route("/connected")
+     */
+    public function connectedAction(){
+        return $this->render('All/user/connected.html.twig', [
+            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR
+        ]);
     }
 
 }

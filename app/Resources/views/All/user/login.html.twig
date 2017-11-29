@@ -1,9 +1,9 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-1.html.twig' %}
     {% block body %}
         {{ parent() }}
         {% block login %}
             <span>Connexion</span>
-            <form action="{{ path('index') }}" method="post">
+            <form action="{{ path('connected') }}" method="post" style="margin-bottom: 100px">
                 <div class="input-group col-md-6">
                     <span class="input-group-addon">Identifiant</span>
                     <input class="form-control" type="text" id="firstname" name="login" />
@@ -16,5 +16,6 @@
                 <br>
                 <input type="submit" value="Envoyer" class="btn btn-default" />
             </form>
+
         {% endblock %}
     {% endblock %}
