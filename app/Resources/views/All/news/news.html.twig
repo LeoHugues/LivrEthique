@@ -13,14 +13,13 @@
 </head>
 <body>
 {% block body %}
-    {% for news in newsTab %}
+    {% for news in newstab %}
         <div class="news_block">
            <h2>{{ news.title }}</h2>
             <p>
                 {{ news.content }}
             </p>
         </div>
-
     {% endfor %}
 {% endblock %}
 {% block javascripts %}{% endblock %}

@@ -16,7 +16,7 @@ use AllBundle\Model\News;
 class NewsController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/news")
      */
     public function newsAction(Request $request)
     {
