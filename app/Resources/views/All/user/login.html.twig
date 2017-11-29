@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+    {% block body %}
+        {{ parent() }}
+        {% block login %}
+            <span>Connexion</span>
+            <form action="{{ path('index') }}" method="post">
+                <div class="input-group col-md-6">
+                    <span class="input-group-addon">Identifiant</span>
+                    <input class="form-control" type="text" id="firstname" name="login" />
+                </div>
+                <br>
+                <div class="input-group col-md-6">
+                    <span class="input-group-addon">Mot de passe</span>
+                    <input class="form-control" type="password" object="lastname" name="password" />
+                </div>
+                <br>
+                <input type="submit" value="Envoyer" class="btn btn-default" />
+            </form>
+        {% endblock %}
+    {% endblock %}

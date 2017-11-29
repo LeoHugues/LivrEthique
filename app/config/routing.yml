@@ -3,6 +3,10 @@ all:
     type:     annotation
     prefix:   /
 
+index:
+    path: /
+    defaults: { _controller: AllBundle:User:index}
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
@@ -10,3 +14,7 @@ app:
 contact:
     path:     /contact
     defaults: { _controller: AppBundle:Contact:contact }
+
+news:
+    path:     /news
+    defaults: { _controller: AppBundle:NewsController:news }
