@@ -3,9 +3,9 @@ all:
     type:     annotation
     prefix:   /
 
-login:
+index:
     path: /
-    defaults: { _controller: AllBundle:User:login}
+    defaults: { _controller: AllBundle:User:index}
 
 app:
     resource: '@AppBundle/Controller/'
