@@ -38,7 +38,7 @@ class NewsController extends Controller
 
         return $this->render('All/news/news.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-            array('newstab' => $newsTab)
+            'newstab' => $newsTab,
         ]);
 
     }
