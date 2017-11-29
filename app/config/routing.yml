@@ -3,6 +3,10 @@ all:
     type:     annotation
     prefix:   /
 
+login:
+    path: /
+    defaults: { _controller: AllBundle:User:login}
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
