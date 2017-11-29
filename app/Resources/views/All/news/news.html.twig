@@ -9,10 +9,15 @@
 {% block body %}
     {% for news in newstab %}
         <div class="news_block">
-           <h2>{{ news.title }}</h2>
-            <p>
-                {{ news.content }}
-            </p>
+           <a href="#"><h2>{{ news.title }}</h2></a>
+            <i>{{ news.newsCategoryId }} | Mis en ligne aujourd'hui</i>
+            <div class="content">
+                <img src="https://positivr.fr/wp-content/uploads/2015/12/greenpeace-lobby-cop21-piege-scientifiques-corruption-2.jpg"/>
+                <p> {{ news.content }} </p>
+            </div>
         </div>
     {% endfor %}
+    <script>
+        $(".news_block").hide().fadeIn(3000);
+    </script>
 {% endblock %}
