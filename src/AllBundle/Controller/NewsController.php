@@ -11,12 +11,12 @@ namespace AllBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
-use src\AllBundle\Model\News.php;
+use AllBundle\Model\News;
 
 class NewsController extends Controller
 {
     /**
-     * @Route("/news")
+     * @Route("/")
      */
     public function newsAction(Request $request)
     {
