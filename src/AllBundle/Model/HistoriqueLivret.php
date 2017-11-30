@@ -15,6 +15,7 @@ class HistoriqueLivret
     public $crediteur;
     public $label;
     public $reference;
+    public $date;
 
     function __construct()
     {

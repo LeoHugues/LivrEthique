@@ -18,3 +18,7 @@ contact:
 news:
     path:     /news
     defaults: { _controller: AllBundle:News:news }
+
+livret:
+    path:     /livret
+    defaults: { _controller: AllBundle:Livret:livret }
