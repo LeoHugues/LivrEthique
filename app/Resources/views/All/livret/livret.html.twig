@@ -1,6 +1,5 @@
 {% extends 'base-proto.html.twig' %}
 {% block stylesheets %}
-    {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
@@ -8,7 +7,6 @@
 {% endblock %}
 
 {% block body %}
-<<<<<<< HEAD
 <input style="text-align: center; width: 265px; cursor: pointer" type="button" class="btn-primary col-md-offset-5" value="Gérer mes domaines d'investissement"/>
     <div class="container">
         <h2>Votre LivrEthique</h2>
@@ -43,62 +41,21 @@
                 <td>
                     {% if transaction.solde is defined %}
                         -{{ transaction.solde }}
-=======
- <input style="text-align: center; width: 265px; cursor: pointer" type="button" class="btn-primary col-md-offset-5" value="Gérer mes domaines d'investissement"/>
-    <section id="section_1">
-        <div class="container">
-            <div class="section-heading scrollpoint sp-effect3">
-                <h2>Votre LivrEthtique</h2>
-                <div class="divider"></div>
-                <p>Période du mois de novembre</p>
-            </div>
-            <table class="table table-dark table-striped">
-                <thead>
-                <tr>
-                    <th>Action</th>
-                    <th>Débiteur/Créditeur</th>
-                    <th>Label de l'opération</th>
-                    <th>Prix</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for transaction in historique %}
-                <tr>
-                    <td>
-                    {% if transaction.debiteur is defined %}
-                        <span style="color:lightcoral">Débit</span>
->>>>>>> 52fe669b04c544617cef0776cee587dc240da647
                     {% else %}
-                        <span style="color:lightgreen">Crédit</span>
+                        +{{ transaction.credit }}
                     {% endif %}
-                    </td>
-                    <td>
-                    {% if transaction.debiteur is defined %}
-                        {{ transaction.debiteur }}
-                    {% else %}
-                        {{ transaction.crediteur }}
-                    {% endif %}
-                    </td>
-                    <td> {{ transaction.label }}</td>
-                    <td>
-                        {% if transaction.solde is defined %}
-                            -{{ transaction.solde }}
-                        {% else %}
-                            +{{ transaction.credit }}
-                        {% endif %}
-                    </td>
-                </tr>
-                {% endfor %}
-                </tbody>
-                <tfoot>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>1200€</td>
-                </tfoot>
-            </table>
-        </div>
-    </section>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1200€</td>
+            </tfoot>
+        </table>
+    </div>
     <script>
         $(".container").hide().fadeIn(1000);
     </script
