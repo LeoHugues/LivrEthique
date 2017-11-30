@@ -26,3 +26,7 @@ news:
 livret:
     path:     /livret
     defaults: { _controller: AllBundle:Livret:livret }
+
+domaine:
+    path:     /domaine
+    defaults: { _controller: AllBundle:Domaine:domaine }

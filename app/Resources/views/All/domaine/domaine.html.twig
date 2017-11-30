@@ -1,0 +1,171 @@
+{% extends 'base-proto.html.twig' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/domaine.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Liste des domaines d'investissements</div>
+
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Batiment
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDefault" class="label-default"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Energies renouvelables
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Agriculture / Développement durable
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionSuccess" class="label-success"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Médical / Para-médical
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionInfo" class="label-info"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Patrimoine / Culture
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionWarning" class="label-warning"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Technique / Industrie
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                <div class="panel panel-default">
+                    <!-- Default panel contents -->
+                    <div class="panel-heading">Liste des départements</div>
+
+                    <!-- List group -->
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            Auvergne-Rhône-Alpes
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDefault" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDefault" class="label-default"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Bourgogne-Franche-Comté
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionPrimary" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionPrimary" class="label-primary"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Bretagne
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionSuccess" class="label-success"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Centre-Val de Loire
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionInfo" class="label-info"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Corse
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionWarning" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionWarning" class="label-warning"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Grand Est
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Hauts-de-France
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Île-de-France
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Normandie
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Nouvelle-Aquitaine
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Occitanie
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Pays de la Loire
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            Provence-Alpes-Côte d'Azur
+                            <div class="material-switch pull-right">
+                                <input id="someSwitchOptionDanger" name="someSwitchOption001" type="checkbox"/>
+                                <label for="someSwitchOptionDanger" class="label-danger"></label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
