@@ -1,5 +1,6 @@
 {% extends 'base-proto.html.twig' %}
 {% block stylesheets %}
+    {{ parent() }}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
@@ -7,16 +8,20 @@
 {% endblock %}
 
 {% block body %}
-    {% for news in newstab %}
-        <div class="news_block">
-           <a href="#"><h2>{{ news.title }}</h2></a>
-            <i>{{ news.newsCategoryId }} | Mis en ligne aujourd'hui</i>
-            <div class="content">
-                <img src="https://positivr.fr/wp-content/uploads/2015/12/greenpeace-lobby-cop21-piege-scientifiques-corruption-2.jpg"/>
-                <p> {{ news.content }} </p>
+    <section id=section_1">
+        <div class=container">
+        {% for news in newstab %}
+            <div class="news_block">
+               <a href="#"><h2>{{ news.title }}</h2></a>
+                <i>{{ news.newsCategoryId }} | Mis en ligne aujourd'hui</i>
+                <div class="content">
+                    <img src="https://positivr.fr/wp-content/uploads/2015/12/greenpeace-lobby-cop21-piege-scientifiques-corruption-2.jpg"/>
+                    <p> {{ news.content }} </p>
+                </div>
             </div>
+        {% endfor %}
         </div>
-    {% endfor %}
+    </section>
     <script>
         $(".news_block").hide().fadeIn(3000);
     </script>

@@ -8,11 +8,24 @@
 .jumbotron h1 {
     color: black;
     text-align: center;
+    font-size: 80px;
+    position: relative;
+    top: 70px;
+}
+
+#presentation {
+    margin: 150px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
 }
 
 .jumbotron p {
     color: black;
-    margin-top: 300px;
-    padding-left: 100px;
-    padding-right: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 30px;
+    font-weight: 500;
+    color: #000000;
 }
