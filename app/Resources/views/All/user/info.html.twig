@@ -1,8 +1,20 @@
 {% extends 'base-proto.html.twig' %}
     {% block body %}
        {% block login %}
-            <span>Mes informations</span>
-
+            <div class="input-group col-md-offset-3">
+                <p>Mes informations</p>
+                <p>Prénom  : Jean</p>
+                <p>Nom     : Jean</p>
+                </br>
+                <p>Adresse : 1 rue de la croix verte</p>
+                <p>Ville   : Montpellier</p>
+                <p>CP      : 34090</p>
+                </br>
+                <p>Mes identifiants</p>
+                <p>login   : JeanJean</p>
+                <p>Mdp     : ********</p>
+                <button class="btn-primary">Change de mdp</button>
+            </div>
 
         {% endblock %}
     {% endblock %}
