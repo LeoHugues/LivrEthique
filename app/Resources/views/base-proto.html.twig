@@ -4,6 +4,19 @@
         <meta charset="UTF-8" />
         <title>{% block title %}LivrEthique{% endblock %}</title>
         {% block stylesheets %}
+            <link rel="shortcut icon" href="favicon.ico">
+            <link rel="stylesheet" href="css/bootstrap.css">
+
+            <link rel="stylesheet" href="css/animate.css">
+            <link rel="stylesheet" href="css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/slick.css">
+            <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+
+            <link rel="stylesheet" href="css/freeze.css">
+
+
+            <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+
             <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
             <script src="{{ asset('js/jquery.min.js') }}"></script>
             <script src="{{ asset('js/bootstrap.js') }}"></script>
@@ -13,7 +26,7 @@
     </head>
     <body>
         {% block menu %}
-            <nav class="navbar navbar-default">
+            <nav class="navbar navbar-default tp-banner-container">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
