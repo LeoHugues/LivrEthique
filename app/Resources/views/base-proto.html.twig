@@ -22,15 +22,15 @@
     <body>
         {% block menu %}
             <nav class="navbar navbar-default tp-banner-container">
-                <section id=section_1">
-                    <div class=container">
+                <section id="section_1">
+                    <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                             <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
                         </div>
-                        <div class=section-heading scrollpoint sp-effect3">
+                        <div class="section-heading scrollpoint sp-effect3">
                             <h1>LivrEthique</h1>
-                            <div class=divider"></div>
+                            <div class="divider"></div>
                             <p>Ethiquement responsable</p>
                         </div>
                         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,7 +38,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="{{ app.request.get('_route') == 'all_news_news' ? 'active' }}"><a href="{{ path('news') }}">Accueil</a></li>
                                 <li class="{{ app.request.get('_route') == 'all_user_info' ? 'active' }}"><a href="{{ path('info') }}">Mes informations</a></li>
-                                <li class="{{ app.request.get('_route') == 'all_user_info' ? 'active' }}"><a href="{{ path('livret') }}">Mon livrEthique</a></li>
+                                <li class="{{ app.request.get('_route') == 'all_livret_livret' ? 'active' }}"><a href="{{ path('livret') }}">Mon livrEthique</a></li>
                             </ul>
                             <form class="navbar-form navbar-left">
                                 <div class="form-group">

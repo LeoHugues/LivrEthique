@@ -138,9 +138,6 @@ header .navbar-default.scrolled .navbar-brand img {
 header .navbar-default.scrolled ul.navbar-nav {
   padding-top: 15px;
 }
-.scrollpoint {
-  opacity: 0;
-}
 .scrollpoint.active {
   opacity: 1 \0;
 }
