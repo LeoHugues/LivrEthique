@@ -36,8 +36,8 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="/news">Accueil</a></li>
-                                <li><a href="{{ path('info') }}">Mes informations</a></li>
+                                <li class="{{ app.request.get('_route') == 'all_news_news' ? 'active' }}"><a href="{{ path('news') }}">Accueil</a></li>
+                                <li class="{{ app.request.get('_route') == 'all_user_info' ? 'active' }}"><a href="{{ path('info') }}">Mes informations</a></li>
                                 <li><a href="#">Mon livrEthique</a></li>
                             </ul>
                             <form class="navbar-form navbar-left">
