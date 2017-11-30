@@ -9,10 +9,7 @@
                 @font-face {
                     font-family: 'eacologica';
                     src:    url("{{asset('fonts/eacologica-round-slab-ffp.otf')}}") format('opentype'),
-                            url("{{asset('fonts/eacologica-round-slab-ffp.ttf')}}") format('ttf');
-                    font-family: 'messages';
-                    src:    url("{{asset('fonts/Messages-Italic.tff')}}") format('ttf'),
-                            url("{{asset('fonts/Messages.ttf')}}") format('ttf');
+                            url("{{asset('fonts/eacologica-round-slab-ffp.ttf')}}") format('truetype');
                 }
             </style>
             <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -25,10 +22,12 @@
         {% block body %}
             <div class="jumbotron">
                 <h1 style="font-family: eacologica;">LivrEthique</h1>
-                <p style="font-family: messages;"> LivrEthique est un produit financier innovant. Il permet de garantir une utilisation éthique, responsable ou solidaire de l’argent qui “dort” sur nos comptes. En effet nous souhaitons rendre les citoyens, acteurs de leur économie. Nous souhaitons rendre le pouvoir des banques à leur client, qui trop souvent ne saisissent pas toute la complexité et toute l’importance de notre modèle économique. Nous savons comme cela est frustrant, et comme il est difficile d’agir puisque nous ne pouvons pas nous passer des banques aujourd’hui.
+                <div id="presentation">
+                    <p>LivrEthique est un produit financier innovant. Il permet de garantir une utilisation éthique, responsable ou solidaire de l’argent qui “dort” sur nos comptes. En effet nous souhaitons rendre les citoyens, acteurs de leur économie. Nous souhaitons rendre le pouvoir des banques à leur client, qui trop souvent ne saisissent pas toute la complexité et toute l’importance de notre modèle économique. Nous savons comme cela est frustrant, et comme il est difficile d’agir puisque nous ne pouvons pas nous passer des banques aujourd’hui.
 
-                    A partir de ce constat, nous avons imaginé une solution permettant de redonner du pouvoir à ceux qui le souhaite. Nous offrons la possibilitée à nos client de comprendre et de choisir comment participer, à leur niveau, à la croissance de leur ville, de leur région ou de leur pays.
-                </p>
+                            A partir de ce constat, nous avons imaginé une solution permettant de redonner du pouvoir à ceux qui le souhaite. Nous offrons la possibilitée à nos client de comprendre et de choisir comment participer, à leur niveau, à la croissance de leur ville, de leur région ou de leur pays.
+                    </p>
+                </div>
             </div>
         {% endblock %}
         {% block javascripts %}{% endblock %}
